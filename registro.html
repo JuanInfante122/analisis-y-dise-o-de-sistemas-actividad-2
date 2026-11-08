@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Crea tu cuenta | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior con-atras"><a class="btn-icono" href="index.html" aria-label="Volver"><svg class="ic ic-24" aria-hidden="true"><use href="#i-atras"/></svg></a><h1>Crea tu cuenta</h1><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main" style="padding-top:20px">
+    <p class="text-secondary-ur m-0">Con tu zona y tus clases calculamos a qué hora debes salir.</p>
+    <form class="d-flex flex-column gap-3" action="inicio.html" data-correo novalidate>
+      <div><label class="form-label" for="nombre">Nombre</label><input class="form-control" id="nombre" value="Mayra Catalina Roa" autocomplete="name"><div class="form-text">Así te verán en los grupos: solo tu primer nombre.</div></div>
+      <div><label class="form-label" for="correo-r">Correo institucional</label><input class="form-control" id="correo-r" type="email" value="mayra.roa@ibero.edu.co" autocomplete="email"><div class="form-text">Solo correos @ibero.edu.co.</div><div class="invalid-feedback">Usa tu correo institucional (@ibero.edu.co).</div></div>
+      <div><label class="form-label" for="zona">Zona o estación de destino</label><select class="form-select" id="zona"><option selected>Bosa</option><option>Kennedy</option><option>Soacha</option><option>Suba</option><option>Portal Américas</option></select><div class="form-text">Puedes cambiarla después en tu perfil.</div></div>
+      <div><label class="form-label" for="margen">Minutos de margen</label><select class="form-select" id="margen"><option>3 minutos</option><option selected>5 minutos</option><option>10 minutos</option></select><div class="form-text">Tiempo extra que restamos a la hora de salida.</div></div>
+      <button class="btn btn-primary w-100" type="submit">Crear cuenta</button>
+    </form>
+    <p class="t-pequeno text-secondary-ur m-0">Solo pedimos nombre y correo. Tratamos tus datos según la Ley 1581 de 2012.</p>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

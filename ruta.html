@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Detalle de ruta | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior con-atras"><a class="btn-icono" href="rutas.html" aria-label="Volver"><svg class="ic ic-24" aria-hidden="true"><use href="#i-atras"/></svg></a><h1>Detalle de ruta</h1><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main" style="gap:14px">
+    <div class="d-flex align-items-center gap-2"><span class="ruta ruta-verde">T21</span><span class="t-seccion">Hacia Portal Américas</span></div>
+    <section class="tarjeta d-flex flex-column gap-1">
+      <div class="d-flex align-items-center gap-2"><span class="t-etiqueta text-secondary-ur flex-grow-1">Sal antes de</span><span class="estado estado-ok"><svg class="ic " aria-hidden="true"><use href="#i-check"/></svg>A tiempo</span></div>
+      <div class="t-hora num">10:06 p. m.</div>
+      <p class="t-pequeno text-secondary-ur m-0">Último bus a las 10:20 p. m. menos 9 min de caminata y 5 de margen.</p>
+    </section>
+    <div class="d-flex flex-column gap-2">
+      <div class="dato dato-cuerpo"><svg class="ic " aria-hidden="true"><use href="#i-paradero"/></svg><span>Paradero Cra. 7 con Cl. 67, costado oriental</span></div>
+      <div class="dato dato-cuerpo"><svg class="ic " aria-hidden="true"><use href="#i-caminata"/></svg><span>Sal por la portería principal y camina 2 cuadras al norte</span></div>
+      <div class="dato dato-cuerpo"><svg class="ic " aria-hidden="true"><use href="#i-reloj"/></svg><span>Horario actualizado por Bienestar el 2 de noviembre de 2026</span></div>
+    </div>
+    <section class="tarjeta-borde d-flex flex-column gap-2" aria-labelledby="seg">
+      <h2 class="t-fuerte m-0" id="seg">Así califican este paradero</h2>
+      <div class="d-flex align-items-center gap-3"><span class="t-pantalla num">3,8</span><span class="estrellas" role="img" aria-label="4 de 5"><svg class="ic on" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ic on" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ic on" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ic on" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></span></div>
+      <p class="t-pequeno text-secondary-ur m-0">Seguridad 3,8 e iluminación 3,1, de 24 calificaciones.</p>
+      <p class="t-pequeno m-0">"Bien iluminado hasta la esquina; después del puente se pone solo."</p>
+      <a class="btn btn-texto align-self-start px-0" href="calificar.html">Calificar este paradero</a>
+    </section>
+    <div class="d-flex align-items-center"><h2 class="t-seccion m-0 flex-grow-1">Grupos hacia este paradero</h2><span class="t-etiqueta text-secondary-ur">1 activo</span></div>
+    <article class="tarjeta-borde grupo">
+  <div class="d-flex align-items-center gap-2"><span class="t-fuerte flex-grow-1">Salen a las 9:50 p. m.</span><span class="t-etiqueta text-secondary-ur">3 de 6</span></div>
+  <div class="dato"><svg class="ic ic-16" aria-hidden="true"><use href="#i-paradero"/></svg><span>Portería principal</span></div>
+  <button class="btn btn-primary w-100" type="button" data-toast="Te uniste al grupo de las 9:50 p. m.">Unirme al grupo</button>
+</article>
+    <a class="btn btn-secundario w-100" href="crear-grupo.html">Crear un grupo</a>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

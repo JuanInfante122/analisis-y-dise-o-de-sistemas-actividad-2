@@ -1,0 +1,93 @@
+/* ÚltimaRuta: variables de diseño.
+   Mismos nombres y valores que las variables de Figma (colección "Color", grupos claro/ y oscuro/;
+   colección "Espaciado y radios"). Figma: claro/bg/canvas  ->  CSS: --ur-bg-canvas */
+
+@font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+:root,
+[data-bs-theme="light"] {
+  /* Color: tema claro */
+  --ur-bg-canvas: #F4F5F8;
+  --ur-bg-surface: #FFFFFF;
+  --ur-bg-surface-alt: #EBEDF2;
+  --ur-bg-brand: #4039D8;
+  --ur-bg-brand-soft: #EEEDFF;
+  --ur-text-primary: #13151C;
+  --ur-text-secondary: #525A68;
+  --ur-text-on-brand: #FFFFFF;
+  --ur-text-brand: #4039D8;
+  --ur-border-default: #DDE1E8;
+  --ur-border-strong: #C2C8D2;
+  --ur-status-ok-bg: #E2F5E9;
+  --ur-status-ok-text: #117A3C;
+  --ur-status-warn-bg: #FFF2D4;
+  --ur-status-warn-text: #875700;
+  --ur-status-off-bg: #EBEDF2;
+  --ur-status-off-text: #525A68;
+  --ur-status-danger-bg: #FDE8E7;
+  --ur-status-danger-text: #C42B22;
+  --ur-star: #F0A500;
+  --ur-star-off: #C2C8D2;
+  --ur-shadow-card: 0 2px 8px rgba(18, 20, 31, 0.08), 0 1px 2px rgba(18, 20, 31, 0.06);
+  --ur-shadow-sheet: 0 -4px 24px rgba(18, 20, 31, 0.16);
+}
+
+[data-bs-theme="dark"] {
+  /* Color: tema oscuro */
+  --ur-bg-canvas: #0C0D12;
+  --ur-bg-surface: #13151C;
+  --ur-bg-surface-alt: #1B1E27;
+  --ur-bg-brand: #5E59F2;
+  --ur-bg-brand-soft: #1D1A5C;
+  --ur-text-primary: #F4F5F8;
+  --ur-text-secondary: #C2C8D2;
+  --ur-text-on-brand: #FFFFFF;
+  --ur-text-brand: #A9A5FF;
+  --ur-border-default: #262A35;
+  --ur-border-strong: #3A404C;
+  --ur-status-ok-bg: #0F2E1C;
+  --ur-status-ok-text: #7BDFA4;
+  --ur-status-warn-bg: #33260A;
+  --ur-status-warn-text: #FFCF5C;
+  --ur-status-off-bg: #1B1E27;
+  --ur-status-off-text: #C2C8D2;
+  --ur-status-danger-bg: #3A1513;
+  --ur-status-danger-text: #FF9A92;
+  --ur-star: #F0A500;
+  --ur-star-off: #3A404C;
+  --ur-shadow-card: 0 0 0 1px #262A35;
+  --ur-shadow-sheet: 0 -4px 24px rgba(0, 0, 0, 0.5);
+}
+
+:root {
+  /* Colores de línea de ruta (iguales en ambos temas; texto blanco >= 5:1) */
+  --ur-route-rojo: #C93A1E;
+  --ur-route-verde: #0B7D68;
+  --ur-route-azul: #2459C9;
+  --ur-route-morado: #7E36BF;
+  --ur-route-ocre: #A35A00;
+  --ur-route-rosa: #B8326A;
+
+  /* Espaciado (múltiplos de 4) */
+  --ur-space-1: 4px;
+  --ur-space-2: 8px;
+  --ur-space-3: 12px;
+  --ur-space-4: 16px;
+  --ur-space-5: 20px;
+  --ur-space-6: 24px;
+  --ur-space-8: 32px;
+  --ur-space-10: 40px;
+
+  /* Radios */
+  --ur-radius-sm: 8px;
+  --ur-radius-md: 12px;
+  --ur-radius-lg: 16px;
+  --ur-radius-xl: 24px;
+  --ur-radius-full: 999px;
+
+  /* Tipografía (estilos de texto de Figma) */
+  --ur-font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}

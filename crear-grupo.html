@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Crear grupo de salida | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior con-atras"><a class="btn-icono" href="ruta.html" aria-label="Volver"><svg class="ic ic-24" aria-hidden="true"><use href="#i-atras"/></svg></a><h1>Crear grupo de salida</h1><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main" style="padding-top:20px">
+    <div class="contexto"><span class="ruta ruta-verde">T21</span><span>Hacia Portal Américas. Debes salir antes de las 10:06 p. m.</span></div>
+    <form class="d-flex flex-column gap-3 flex-grow-1" action="mis-grupos.html">
+      <div><label class="form-label" for="punto">Punto de encuentro</label><select class="form-select" id="punto"><option>Portería principal</option><option>Bloque A, primer piso</option><option>Plazoleta central</option></select><div class="form-text">Solo puntos dentro del campus.</div></div>
+      <div><label class="form-label" for="hora">Hora de salida</label><input class="form-control is-invalid" id="hora" type="time" value="22:15" data-limite="22:06" aria-describedby="hora-error"><div class="invalid-feedback" id="hora-error">La hora debe ser antes de 10:06 p. m.</div></div>
+      <div><span class="form-label d-block">Cupo máximo</span><div class="cupo" data-cupo><button type="button" aria-label="Quitar una persona"><svg class="ic " aria-hidden="true"><use href="#i-menos"/></svg></button><output data-valor="6" aria-live="polite">6 personas</output><button type="button" data-mas aria-label="Agregar una persona"><svg class="ic " aria-hidden="true"><use href="#i-mas"/></svg></button></div><div class="form-text">Entre 2 y 8 personas.</div></div>
+      <button class="btn btn-primary w-100 mt-auto" type="submit" data-publicar>Publicar grupo</button>
+    </form>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

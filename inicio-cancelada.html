@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Inicio: clase cancelada | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior"><h1>Buenas noches, Mayra</h1><a class="btn-icono" href="inicio.html" aria-label="Avisos de clase"><svg class="ic ic-24" aria-hidden="true"><use href="#i-aviso"/></svg></a><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main con-nav" style="gap:14px">
+    <div class="aviso aviso-cancelada" role="status"><svg class="ic " aria-hidden="true"><use href="#i-x"/></svg><div><p class="t-fuerte">Bases de Datos se canceló hoy</p><p class="t-pequeno">Te mostramos las rutas y grupos que salen más temprano.</p></div></div>
+    <section class="tarjeta d-flex flex-column gap-2" aria-labelledby="salida">
+      <h2 class="visually-hidden" id="salida">Tu salida de hoy</h2>
+      <div class="d-flex align-items-center gap-2"><span class="ruta ruta-ocre">Z12</span><span class="t-fuerte flex-grow-1">Hacia Bosa La Libertad</span><span class="estado estado-pronto"><svg class="ic " aria-hidden="true"><use href="#i-reloj"/></svg>¡Pronto!</span></div>
+      <div><div class="t-etiqueta text-secondary-ur">Sal antes de</div><div class="t-hora num">9:23 p. m.</div></div>
+      <p class="m-0">Ya no tienes más clases. Si sales ahora alcanzas la ruta más temprana.</p>
+      <hr class="divisor">
+      <div class="dato"><svg class="ic " aria-hidden="true"><use href="#i-caminata"/></svg><span>7 min a pie desde el bloque A</span></div>
+      <div class="dato"><svg class="ic " aria-hidden="true"><use href="#i-paradero"/></svg><span>Paradero Cra. 7 con Cl. 67, costado oriental</span></div>
+      <div class="dato"><svg class="ic " aria-hidden="true"><use href="#i-seguridad"/></svg><span>Seguridad 3,8 de 5 (24 calificaciones)</span></div>
+      <a class="btn btn-secundario w-100 mt-1" href="ruta.html">Ver detalle de la ruta</a>
+    </section>
+    <h2 class="t-seccion m-0">Grupos que salen hacia tu paradero</h2>
+    <article class="tarjeta-borde grupo">
+  <div class="d-flex align-items-center gap-2"><span class="t-fuerte flex-grow-1">Salen a las 9:15 p. m.</span><span class="t-etiqueta text-secondary-ur">2 de 5</span></div>
+  <div class="dato"><svg class="ic ic-16" aria-hidden="true"><use href="#i-paradero"/></svg><span>Bloque A, primer piso</span></div>
+  <button class="btn btn-primary w-100" type="button" data-toast="Te uniste al grupo de las 9:50 p. m.">Unirme al grupo</button>
+</article>
+  </main>
+  <nav class="barra-inferior" aria-label="Navegación principal"><a href="inicio.html" aria-current="page"><svg class="ic " aria-hidden="true"><use href="#i-inicio"/></svg><span>Inicio</span></a><a href="rutas.html"><svg class="ic " aria-hidden="true"><use href="#i-rutas"/></svg><span>Rutas</span></a><a href="mis-grupos.html"><svg class="ic " aria-hidden="true"><use href="#i-grupo"/></svg><span>Grupos</span></a><a href="perfil.html"><svg class="ic " aria-hidden="true"><use href="#i-perfil"/></svg><span>Perfil</span></a></nav>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

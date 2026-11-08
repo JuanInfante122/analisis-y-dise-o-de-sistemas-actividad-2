@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Novedades de mis clases | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior"><h1>Novedades de mis clases</h1><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main" style="padding-top:20px">
+    <p class="text-secondary-ur m-0">Tus estudiantes lo ven en su inicio en menos de un minuto.</p>
+    <form class="d-flex flex-column gap-3 flex-grow-1" onsubmit="event.preventDefault();urToast('Aviso publicado para 32 estudiantes de Bases de Datos.')">
+      <div><label class="form-label" for="clase">Clase</label><select class="form-select" id="clase"><option>Bases de Datos, grupo N2, hoy 6:30 p. m.</option><option>Programación Web, grupo N1, mañana 6:30 p. m.</option></select><div class="form-text">Solo aparecen tus clases de hoy y mañana.</div></div>
+      <div><span class="form-label d-block">¿Qué pasó?</span><div class="segmentado" role="radiogroup"><input type="radio" class="btn-check" name="novedad" id="n-cambio" value="cambio" checked><label class="btn" for="n-cambio">Cambio de salón</label><input type="radio" class="btn-check" name="novedad" id="n-cancelada" value="cancelada"><label class="btn" for="n-cancelada">Clase cancelada</label></div></div>
+      <div data-solo-cambio><label class="form-label" for="salon">Nuevo salón</label><input class="form-control" id="salon" value="304, bloque C, piso 3" required><div class="form-text">Escribe una referencia si el salón es difícil de encontrar.</div></div>
+      <div data-solo-cambio><label class="form-label" for="ref">Referencia (opcional)</label><input class="form-control" id="ref" value="Escalera junto a la cafetería" maxlength="80"><div class="form-text">Máximo 80 caracteres.</div></div>
+      <button class="btn btn-primary w-100 mt-auto" type="submit">Publicar aviso</button>
+    </form>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

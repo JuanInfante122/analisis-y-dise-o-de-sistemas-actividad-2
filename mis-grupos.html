@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Mis grupos | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior"><h1>Mis grupos</h1><a class="btn-icono" href="inicio.html" aria-label="Avisos de clase"><svg class="ic ic-24" aria-hidden="true"><use href="#i-aviso"/></svg></a><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main con-nav" style="gap:12px">
+    <h2 class="t-seccion m-0">Activos hoy</h2>
+    <article class="tarjeta-borde tarjeta-marca d-flex flex-column gap-2">
+      <div class="d-flex align-items-center gap-2"><span class="ruta ruta-verde">T21</span><span class="t-fuerte flex-grow-1">Salen a las 9:50 p. m.</span><span class="t-etiqueta text-secondary-ur">3 de 6</span></div>
+      <div class="dato"><svg class="ic " aria-hidden="true"><use href="#i-paradero"/></svg><span>Portería principal</span></div>
+      <div class="dato"><svg class="ic " aria-hidden="true"><use href="#i-grupo"/></svg><span>Tú (creador), Andrés y Camila</span></div>
+      <div class="d-flex gap-2 mt-1"><a class="btn btn-secundario flex-fill" href="crear-grupo.html">Editar</a><button class="btn btn-peligro flex-fill" type="button" data-toast="Grupo cancelado. Avisamos a Andrés y Camila.">Cancelar grupo</button></div>
+    </article>
+    <h2 class="t-seccion m-0 mt-2">Últimos 7 días</h2>
+    <div class="dato dato-cuerpo text-secondary-ur py-2"><svg class="ic " aria-hidden="true"><use href="#i-check"/></svg><span>Jueves 5 nov. T21 desde Portería principal, 4 personas</span></div>
+    <div class="dato dato-cuerpo text-secondary-ur py-2"><svg class="ic " aria-hidden="true"><use href="#i-check"/></svg><span>Martes 3 nov. Z12 desde Bloque A, 2 personas</span></div>
+  </main>
+  <nav class="barra-inferior" aria-label="Navegación principal"><a href="inicio.html"><svg class="ic " aria-hidden="true"><use href="#i-inicio"/></svg><span>Inicio</span></a><a href="rutas.html"><svg class="ic " aria-hidden="true"><use href="#i-rutas"/></svg><span>Rutas</span></a><a href="mis-grupos.html" aria-current="page"><svg class="ic " aria-hidden="true"><use href="#i-grupo"/></svg><span>Grupos</span></a><a href="perfil.html"><svg class="ic " aria-hidden="true"><use href="#i-perfil"/></svg><span>Perfil</span></a></nav>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

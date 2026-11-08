@@ -1,0 +1,167 @@
+/* ÚltimaRuta: componentes del UI Kit sobre Bootstrap 5.
+   Cada bloque corresponde a un componente de Figma (página "1. Guía de estilos"). */
+
+/* ---------- Bootstrap conectado a los tokens ---------- */
+:root, [data-bs-theme] {
+  --bs-body-font-family: var(--ur-font);
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.5;
+  --bs-body-bg: var(--ur-bg-canvas);
+  --bs-body-color: var(--ur-text-primary);
+  --bs-secondary-color: var(--ur-text-secondary);
+  --bs-border-color: var(--ur-border-default);
+  --bs-primary: var(--ur-bg-brand);
+  --bs-link-color: var(--ur-text-brand);
+  --bs-link-hover-color: var(--ur-text-brand);
+  --bs-focus-ring-color: color-mix(in srgb, var(--ur-bg-brand) 35%, transparent);
+  --bs-emphasis-color: var(--ur-text-primary);
+}
+body { font-feature-settings: "tnum" 1; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--ur-bg-brand); color: var(--ur-text-on-brand); }
+:focus-visible { outline: 3px solid var(--ur-bg-brand); outline-offset: 2px; }
+a { color: var(--ur-text-brand); text-underline-offset: 3px; }
+a:hover { color: var(--ur-text-brand); }
+.text-secondary-ur { color: var(--ur-text-secondary) !important; }
+
+/* Estilos de texto (mismos nombres que en Figma) */
+.t-hora { font-size: 2.75rem; line-height: 3rem; font-weight: 700; letter-spacing: -1px; }
+.t-pantalla { font-size: 1.5rem; line-height: 1.875rem; font-weight: 600; letter-spacing: -0.3px; }
+.t-seccion { font-size: 1.125rem; line-height: 1.5rem; font-weight: 600; }
+.t-fuerte { font-size: 1rem; line-height: 1.5rem; font-weight: 500; }
+.t-etiqueta { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
+.t-pequeno { font-size: 0.8125rem; line-height: 1.125rem; }
+
+/* Íconos (Lucide, trazo 2) */
+.ic { width: 20px; height: 20px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ic-16 { width: 16px; height: 16px; } .ic-18 { width: 18px; height: 18px; } .ic-24 { width: 24px; height: 24px; } .ic-28 { width: 28px; height: 28px; }
+
+/* ---------- Pantalla móvil ---------- */
+.app { max-width: 480px; min-height: 100vh; margin: 0 auto; background: var(--ur-bg-canvas); position: relative; display: flex; flex-direction: column; }
+.app-main { flex: 1; padding: var(--ur-space-4); display: flex; flex-direction: column; gap: var(--ur-space-4); }
+.app-main.con-nav { padding-bottom: 104px; }
+
+/* Barra superior */
+.barra-superior { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: var(--ur-space-2); min-height: 56px; padding: 0 var(--ur-space-2) 0 var(--ur-space-4); background: var(--ur-bg-surface); border-bottom: 1px solid var(--ur-border-default); }
+.barra-superior.con-atras { padding-left: var(--ur-space-2); }
+.barra-superior h1 { font-size: 1.125rem; line-height: 1.5rem; font-weight: 600; margin: 0; flex: 1; }
+.btn-icono { width: 44px; height: 44px; display: inline-grid; place-items: center; border: 0; border-radius: var(--ur-radius-md); background: transparent; color: var(--ur-text-primary); text-decoration: none; }
+.btn-icono:hover { background: var(--ur-bg-surface-alt); color: var(--ur-text-primary); }
+
+/* Barra inferior */
+.barra-inferior { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; z-index: 20; display: flex; justify-content: space-between; padding: 8px 12px calc(16px + env(safe-area-inset-bottom)); background: var(--ur-bg-surface); border-top: 1px solid var(--ur-border-default); }
+.barra-inferior a { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 48px; padding: 4px 0; font-size: 0.8125rem; color: var(--ur-text-secondary); text-decoration: none; border-radius: var(--ur-radius-md); }
+.barra-inferior a .ic { width: 24px; height: 24px; }
+.barra-inferior a[aria-current="page"] { color: var(--ur-text-brand); font-weight: 500; }
+
+/* ---------- Botón ---------- */
+.btn { --bs-btn-font-weight: 500; --bs-btn-font-size: 1rem; --bs-btn-border-radius: var(--ur-radius-md); --bs-btn-padding-x: 20px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-primary { --bs-btn-bg: var(--ur-bg-brand); --bs-btn-border-color: var(--ur-bg-brand); --bs-btn-color: var(--ur-text-on-brand); --bs-btn-hover-bg: color-mix(in srgb, var(--ur-bg-brand) 88%, #000); --bs-btn-hover-border-color: transparent; --bs-btn-hover-color: var(--ur-text-on-brand); --bs-btn-active-bg: color-mix(in srgb, var(--ur-bg-brand) 80%, #000); --bs-btn-active-color: var(--ur-text-on-brand); --bs-btn-disabled-bg: var(--ur-bg-brand); --bs-btn-disabled-border-color: var(--ur-bg-brand); --bs-btn-disabled-color: var(--ur-text-on-brand); --bs-btn-disabled-opacity: .45; }
+.btn-secundario { --bs-btn-bg: var(--ur-bg-surface); --bs-btn-color: var(--ur-text-brand); --bs-btn-border-color: var(--ur-border-strong); --bs-btn-border-width: 1.5px; --bs-btn-hover-bg: var(--ur-bg-brand-soft); --bs-btn-hover-color: var(--ur-text-brand); --bs-btn-hover-border-color: var(--ur-border-strong); --bs-btn-active-bg: var(--ur-bg-brand-soft); --bs-btn-active-color: var(--ur-text-brand); }
+.btn-texto { --bs-btn-color: var(--ur-text-brand); --bs-btn-hover-color: var(--ur-text-brand); --bs-btn-hover-bg: var(--ur-bg-brand-soft); --bs-btn-active-bg: var(--ur-bg-brand-soft); --bs-btn-border-color: transparent; }
+.btn-peligro { --bs-btn-bg: var(--ur-status-danger-bg); --bs-btn-color: var(--ur-status-danger-text); --bs-btn-border-color: transparent; --bs-btn-hover-bg: var(--ur-status-danger-bg); --bs-btn-hover-border-color: var(--ur-status-danger-text); --bs-btn-hover-color: var(--ur-status-danger-text); --bs-btn-active-bg: var(--ur-status-danger-bg); --bs-btn-active-color: var(--ur-status-danger-text); }
+
+/* ---------- Campo de texto ---------- */
+.form-label { font-size: .875rem; font-weight: 500; margin-bottom: 6px; color: var(--ur-text-primary); }
+.form-control, .form-select { min-height: 48px; border-radius: var(--ur-radius-md); border: 1.5px solid var(--ur-border-strong); background-color: var(--ur-bg-surface); color: var(--ur-text-primary); padding: 10px 14px; }
+.form-control::placeholder { color: var(--ur-text-secondary); opacity: 1; }
+.form-control:focus, .form-select:focus { border-color: var(--ur-bg-brand); border-width: 2px; box-shadow: none; background-color: var(--ur-bg-surface); color: var(--ur-text-primary); }
+.form-control.is-invalid, .form-select.is-invalid { border-color: var(--ur-status-danger-text); background-image: none; }
+.form-text { font-size: .8125rem; color: var(--ur-text-secondary); margin-top: 6px; }
+.invalid-feedback { font-size: .8125rem; color: var(--ur-status-danger-text); margin-top: 6px; }
+textarea.form-control { min-height: 96px; }
+
+/* ---------- Código de ruta ---------- */
+.ruta { display: inline-flex; align-items: center; height: 26px; padding: 0 8px; border-radius: var(--ur-radius-sm); color: #fff; font-weight: 700; font-size: .875rem; letter-spacing: .2px; line-height: 1; flex: none; }
+.ruta-rojo { background: var(--ur-route-rojo); } .ruta-verde { background: var(--ur-route-verde); } .ruta-azul { background: var(--ur-route-azul); }
+.ruta-morado { background: var(--ur-route-morado); } .ruta-ocre { background: var(--ur-route-ocre); } .ruta-rosa { background: var(--ur-route-rosa); }
+
+/* ---------- Estado de ruta ---------- */
+.estado { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 8px; border-radius: var(--ur-radius-full); font-size: .875rem; font-weight: 500; line-height: 1.25rem; width: fit-content; }
+.estado .ic { width: 16px; height: 16px; }
+.estado-ok { background: var(--ur-status-ok-bg); color: var(--ur-status-ok-text); }
+.estado-pronto, .estado-verificar { background: var(--ur-status-warn-bg); color: var(--ur-status-warn-text); }
+.estado-off { background: var(--ur-status-off-bg); color: var(--ur-status-off-text); }
+
+/* ---------- Aviso de clase ---------- */
+.aviso { display: flex; gap: 12px; padding: 16px; border-radius: var(--ur-radius-md); color: var(--ur-text-primary); }
+.aviso .ic { width: 24px; height: 24px; }
+.aviso p { margin: 0; }
+.aviso-cambio { background: var(--ur-status-warn-bg); } .aviso-cambio > .ic { color: var(--ur-status-warn-text); }
+.aviso-cancelada { background: var(--ur-status-danger-bg); } .aviso-cancelada > .ic { color: var(--ur-status-danger-text); }
+
+/* ---------- Superficies ---------- */
+.tarjeta { background: var(--ur-bg-surface); border-radius: var(--ur-radius-lg); box-shadow: var(--ur-shadow-card); padding: 16px; }
+.tarjeta-borde { background: var(--ur-bg-surface); border-radius: var(--ur-radius-lg); border: 1px solid var(--ur-border-default); padding: 16px; }
+.tarjeta-marca { border: 1.5px solid var(--ur-bg-brand); }
+.dato { display: flex; gap: 8px; align-items: flex-start; color: var(--ur-text-secondary); font-size: .8125rem; line-height: 1.125rem; }
+.dato .ic { width: 18px; height: 18px; }
+.dato-cuerpo { color: var(--ur-text-primary); font-size: 1rem; line-height: 1.5rem; gap: 10px; }
+.dato-cuerpo .ic { width: 20px; height: 20px; color: var(--ur-text-secondary); margin-top: 2px; }
+.divisor { height: 1px; background: var(--ur-border-default); border: 0; margin: 2px 0; opacity: 1; }
+
+/* ---------- Fila de ruta ---------- */
+.fila-ruta { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: var(--ur-radius-lg); background: var(--ur-bg-surface); box-shadow: var(--ur-shadow-card); color: var(--ur-text-primary); text-decoration: none; }
+.fila-ruta:hover { color: var(--ur-text-primary); box-shadow: var(--ur-shadow-card), 0 0 0 1.5px var(--ur-border-strong); }
+.fila-ruta .info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.fila-ruta .limite { text-align: right; flex: none; }
+.fila-ruta .limite strong { display: block; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600; }
+.fila-ruta.sin-servicio { opacity: .62; }
+
+/* ---------- Tarjeta de grupo ---------- */
+.grupo { display: flex; flex-direction: column; gap: 12px; }
+
+/* ---------- Calificación ---------- */
+.estrellas { display: inline-flex; gap: 4px; }
+.estrellas .ic { width: 28px; height: 28px; stroke: var(--ur-star-off); }
+.estrellas .ic.on { stroke: var(--ur-star); fill: var(--ur-star); }
+.calificar { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0; border: 0; padding: 0; margin: 0; }
+.calificar input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.calificar label { width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; border-radius: var(--ur-radius-sm); }
+.calificar label .ic { width: 30px; height: 30px; stroke: var(--ur-star-off); }
+.calificar input:checked ~ label .ic, .calificar label:hover .ic, .calificar label:hover ~ label .ic { stroke: var(--ur-star); fill: var(--ur-star); }
+.calificar input:focus-visible + label { outline: 3px solid var(--ur-bg-brand); }
+
+/* Selector de zona */
+.chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.chips .btn-check + .btn { min-height: 36px; border-radius: var(--ur-radius-full); --bs-btn-padding-x: 14px; --bs-btn-font-size: .875rem; --bs-btn-bg: var(--ur-bg-surface); --bs-btn-color: var(--ur-text-primary); --bs-btn-border-color: var(--ur-border-strong); --bs-btn-hover-bg: var(--ur-bg-surface-alt); --bs-btn-hover-color: var(--ur-text-primary); --bs-btn-hover-border-color: var(--ur-border-strong); white-space: nowrap; }
+.chips .btn-check:checked + .btn { --bs-btn-active-bg: var(--ur-bg-brand); --bs-btn-active-color: var(--ur-text-on-brand); --bs-btn-active-border-color: var(--ur-bg-brand); }
+
+/* Control segmentado */
+.segmentado { display: flex; padding: 4px; gap: 0; border-radius: var(--ur-radius-md); background: var(--ur-bg-surface-alt); }
+.segmentado .btn-check + .btn { flex: 1; min-height: 40px; border: 0; border-radius: var(--ur-radius-sm); --bs-btn-color: var(--ur-text-secondary); --bs-btn-font-weight: 400; --bs-btn-hover-color: var(--ur-text-primary); }
+.segmentado .btn-check:checked + .btn { background: var(--ur-bg-surface); color: var(--ur-text-primary); font-weight: 500; box-shadow: var(--ur-shadow-card); }
+
+/* Cupo */
+.cupo { padding: 0 4px; display: inline-flex; align-items: center; border: 1.5px solid var(--ur-border-strong); border-radius: var(--ur-radius-md); background: var(--ur-bg-surface); }
+.cupo button { width: 56px; height: 48px; border: 0; background: transparent; color: var(--ur-text-brand); font-size: 1.25rem; display: grid; place-items: center; }
+.cupo output { min-width: 140px; text-align: center; font-weight: 500; }
+
+/* Contexto (ruta en formularios) */
+.contexto { display: flex; gap: 8px; align-items: center; padding: 10px 12px; border-radius: var(--ur-radius-md); background: var(--ur-bg-brand-soft); font-size: .8125rem; line-height: 1.125rem; }
+
+/* Marca */
+.logo { width: 48px; height: 48px; border-radius: var(--ur-radius-md); background: var(--ur-bg-brand); color: var(--ur-text-on-brand); display: grid; place-items: center; }
+
+/* Toast */
+.toast-ur { position: fixed; left: 50%; bottom: 108px; transform: translate(-50%, 12px); opacity: 0; pointer-events: none; transition: opacity .2s ease-out, transform .2s ease-out; z-index: 50; background: var(--ur-text-primary); color: var(--ur-bg-surface); padding: 12px 16px; border-radius: var(--ur-radius-md); font-weight: 500; max-width: calc(100% - 32px); box-shadow: var(--ur-shadow-sheet); }
+.toast-ur.visible { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) { .toast-ur { transition: none; } }
+
+/* ---------- Escritorio: Bienestar ---------- */
+.escritorio { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
+.lateral { background: var(--ur-bg-surface); border-right: 1px solid var(--ur-border-default); padding: 20px 12px; display: flex; flex-direction: column; gap: 4px; }
+.lateral .marca { display: flex; align-items: center; gap: 10px; padding: 0 8px 20px; font-weight: 600; font-size: 1.125rem; }
+.lateral .marca .logo { width: 36px; height: 36px; border-radius: 10px; }
+.lateral a { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: var(--ur-radius-md); color: var(--ur-text-secondary); text-decoration: none; font-weight: 500; }
+.lateral a:hover { background: var(--ur-bg-surface-alt); color: var(--ur-text-primary); }
+.lateral a[aria-current="page"] { background: var(--ur-bg-brand-soft); color: var(--ur-text-brand); }
+.lateral .pie { margin-top: auto; }
+.escritorio main { padding: 32px 40px; display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.tabla-ur { --bs-table-bg: var(--ur-bg-surface); --bs-table-color: var(--ur-text-primary); --bs-table-border-color: var(--ur-border-default); --bs-table-hover-bg: var(--ur-bg-surface-alt); --bs-table-hover-color: var(--ur-text-primary); margin: 0; }
+.tabla-ur th { font-size: .8125rem; font-weight: 500; color: var(--ur-text-secondary); background: var(--ur-bg-surface); white-space: nowrap; }
+.tabla-ur td, .tabla-ur th { padding: 14px 16px; vertical-align: middle; }
+.tabla-wrap { background: var(--ur-bg-surface); border-radius: var(--ur-radius-lg); box-shadow: var(--ur-shadow-card); overflow: auto; }
+.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.barra-medida { height: 8px; border-radius: 4px; background: var(--ur-bg-surface-alt); overflow: hidden; min-width: 120px; }
+.barra-medida span { display: block; height: 100%; border-radius: 4px; }
+@media (max-width: 860px) { .escritorio { grid-template-columns: 1fr; } .lateral { flex-direction: row; flex-wrap: wrap; } .lateral .pie { margin-top: 0; } .escritorio main { padding: 20px 16px; } }

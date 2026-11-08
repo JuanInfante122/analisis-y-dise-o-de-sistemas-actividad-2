@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prototipo de ÚltimaRuta">
+<title>Calificar paradero | ÚltimaRuta</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234039D8'/%3E%3Cpath d='M10 9h12a2 2 0 0 1 2 2v9H8v-9a2 2 0 0 1 2-2Zm-2 7h16M11 23v2m10-2v2' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="barra-superior con-atras"><a class="btn-icono" href="ruta.html" aria-label="Volver"><svg class="ic ic-24" aria-hidden="true"><use href="#i-atras"/></svg></a><h1>Calificar paradero</h1><button class="btn-icono" type="button" data-tema aria-label="Usar tema oscuro"><svg class="ic ic-24" aria-hidden="true"><use href="#i-luna"/></svg></button></header>
+  <main class="app-main" style="padding-top:20px;gap:18px">
+    <div class="d-flex align-items-center gap-2 t-fuerte"><svg class="ic ic-24" aria-hidden="true"><use href="#i-paradero"/></svg><span>Paradero Cra. 7 con Cl. 67, costado oriental</span></div>
+    <p class="text-secondary-ur m-0">¿Cómo te fue esta noche? Tu calificación es anónima para los demás.</p>
+    <form class="d-flex flex-column gap-3 flex-grow-1" action="ruta.html">
+      <div class="tarjeta-borde"><div class="d-flex align-items-center gap-2 t-fuerte mb-1"><svg class="ic " aria-hidden="true"><use href="#i-seguridad"/></svg>Seguridad</div><fieldset class="calificar"><input type="radio" name="seg" id="seg-5" value="5" ><label for="seg-5" title="5 de 5"><span class="visually-hidden">5 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="seg" id="seg-4" value="4" ><label for="seg-4" title="4 de 5"><span class="visually-hidden">4 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="seg" id="seg-3" value="3" checked><label for="seg-3" title="3 de 5"><span class="visually-hidden">3 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="seg" id="seg-2" value="2" ><label for="seg-2" title="2 de 5"><span class="visually-hidden">2 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="seg" id="seg-1" value="1" ><label for="seg-1" title="1 de 5"><span class="visually-hidden">1 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label></fieldset></div>
+      <div class="tarjeta-borde"><div class="d-flex align-items-center gap-2 t-fuerte mb-1"><svg class="ic " aria-hidden="true"><use href="#i-iluminacion"/></svg>Iluminación</div><fieldset class="calificar"><input type="radio" name="ilu" id="ilu-5" value="5" ><label for="ilu-5" title="5 de 5"><span class="visually-hidden">5 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="ilu" id="ilu-4" value="4" ><label for="ilu-4" title="4 de 5"><span class="visually-hidden">4 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="ilu" id="ilu-3" value="3" ><label for="ilu-3" title="3 de 5"><span class="visually-hidden">3 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="ilu" id="ilu-2" value="2" checked><label for="ilu-2" title="2 de 5"><span class="visually-hidden">2 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label><input type="radio" name="ilu" id="ilu-1" value="1" ><label for="ilu-1" title="1 de 5"><span class="visually-hidden">1 de 5</span><svg class="ic " aria-hidden="true"><use href="#i-estrella"/></svg></label></fieldset></div>
+      <div><label class="form-label" for="comentario">Comentario (opcional)</label><textarea class="form-control" id="comentario" maxlength="200" data-contador="cont">Después del puente no hay luz y la cuadra queda sola.</textarea><div class="d-flex form-text"><span class="flex-grow-1">No escribas nombres ni datos personales.</span><span id="cont">0/200</span></div></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" id="reporte"><label class="form-check-label" for="reporte">Reportar esta zona como peligrosa</label></div>
+      <button class="btn btn-primary w-100 mt-auto" type="submit" data-toast="Calificación guardada. Gracias por cuidar a los demás.">Guardar calificación</button>
+    </form>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
