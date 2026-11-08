@@ -4,7 +4,7 @@ Maquetación inicial del prototipo de ÚltimaRuta, una plataforma web de movilid
 
 - **Equipo:** Eduardo Lozada Ducuara, Juan Manuel Infante Quiroga y David Eslava Rincón
 - **Demo en línea:** https://juaninfante122.github.io/analisis-y-dise-o-de-sistemas-actividad-2/
-- **Diseño en Figma:** https://www.figma.com/design/nOkjHywa1m7LQH68SRcc1n
+- **Diseño en Figma:** https://www.figma.com/design/Dl60f4LmIzRhTKkToksaER
 
 > **Aviso:** es una maquetación para validar la estructura visual y la navegación. Las rutas, horarios, salones y calificaciones son datos simulados y la lógica del sistema no está implementada en esta fase.
 
@@ -45,7 +45,7 @@ El tema oscuro se activa con el botón de luna de la barra superior o agregando 
 
 | Figma | Código |
 |---|---|
-| Variables `claro/…` y `oscuro/…` de la colección Color | Variables CSS `--ur-…` en `css/tokens.css`, con `[data-bs-theme="dark"]` para el tema oscuro |
+| Colección Color con los modos Claro y Oscuro | Variables CSS `--ur-…` en `css/tokens.css`, con `[data-bs-theme="dark"]` para el tema oscuro |
 | Colección Espaciado y radios | `--ur-space-…` y `--ur-radius-…` |
 | Estilos de texto (Hora/Grande, Título/Pantalla…) | Clases `.t-hora`, `.t-pantalla`, `.t-seccion`, `.t-etiqueta`, `.t-pequeno` |
 | Componentes del UI Kit (Botón, Campo de texto, Estado de ruta, Código de ruta, Aviso de clase, Fila de ruta, Tarjeta de grupo, Calificación, Barra superior, Barra inferior) | Clases del mismo nombre en `css/app.css`, construidas sobre Bootstrap 5 |

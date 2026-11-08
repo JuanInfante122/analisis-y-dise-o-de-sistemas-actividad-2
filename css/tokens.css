@@ -1,6 +1,6 @@
 /* ÚltimaRuta: variables de diseño.
-   Mismos nombres y valores que las variables de Figma (colección "Color", grupos claro/ y oscuro/;
-   colección "Espaciado y radios"). Figma: claro/bg/canvas  ->  CSS: --ur-bg-canvas */
+   Mismos nombres y valores que las variables de Figma (colección "Color" con los modos Claro y Oscuro;
+   colección "Espaciado y radios"). Figma: bg/canvas  ->  CSS: --ur-bg-canvas */
 
 @font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Roboto"; src: url("../fonts/roboto-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
