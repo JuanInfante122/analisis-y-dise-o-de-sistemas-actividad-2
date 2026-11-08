@@ -36,6 +36,9 @@
     Object.keys(ICONS).map(function (k) { return '<symbol id="i-' + k + '" viewBox="0 0 24 24">' + ICONS[k] + '</symbol>'; }).join('') + '</svg>';
   document.body.insertAdjacentHTML('afterbegin', sprite);
 
+  // Modo wireframe para revisar solo la estructura de la pantalla.
+  if (new URLSearchParams(location.search).get('modo') === 'wireframe') document.documentElement.classList.add('wireframe');
+
   // Tema claro / oscuro (RQNF005). Se recuerda en este navegador cuando se puede.
   var root = document.documentElement;
   function leerTema() { try { return localStorage.getItem('ur-tema'); } catch (e) { return null; } }

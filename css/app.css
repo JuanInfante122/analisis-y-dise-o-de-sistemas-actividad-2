@@ -165,3 +165,10 @@ textarea.form-control { min-height: 96px; }
 .barra-medida { height: 8px; border-radius: 4px; background: var(--ur-bg-surface-alt); overflow: hidden; min-width: 120px; }
 .barra-medida span { display: block; height: 100%; border-radius: 4px; }
 @media (max-width: 860px) { .escritorio { grid-template-columns: 1fr; } .lateral { flex-direction: row; flex-wrap: wrap; } .lateral .pie { margin-top: 0; } .escritorio main { padding: 20px 16px; } }
+
+/* ---------- Modo wireframe (?modo=wireframe): solo estructura, sin color ---------- */
+html.wireframe { --ur-bg-canvas: #FFFFFF; --ur-bg-surface: #FFFFFF; --ur-bg-surface-alt: #EFEFEF; --ur-bg-brand: #6B6B6B; --ur-bg-brand-soft: #EFEFEF; --ur-text-primary: #2B2B2B; --ur-text-secondary: #7A7A7A; --ur-text-brand: #2B2B2B; --ur-border-default: #BDBDBD; --ur-border-strong: #9E9E9E; --ur-status-ok-bg: #EFEFEF; --ur-status-ok-text: #2B2B2B; --ur-status-warn-bg: #EFEFEF; --ur-status-warn-text: #2B2B2B; --ur-status-off-bg: #EFEFEF; --ur-status-off-text: #2B2B2B; --ur-status-danger-bg: #EFEFEF; --ur-status-danger-text: #2B2B2B; --ur-star: #6B6B6B; --ur-star-off: #BDBDBD; --ur-shadow-card: 0 0 0 1.5px #9E9E9E; --ur-shadow-sheet: none; }
+html.wireframe .ruta { background: #9E9E9E !important; }
+html.wireframe .aviso, html.wireframe .contexto, html.wireframe .estado { outline: 1.5px dashed #9E9E9E; outline-offset: -1.5px; }
+html.wireframe .ic { opacity: .7; }
+html.wireframe .barra-superior, html.wireframe .barra-inferior { border-color: #9E9E9E; }

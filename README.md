@@ -27,7 +27,7 @@ Maquetación inicial del prototipo de ÚltimaRuta, una plataforma web de movilid
 | `perfil.html` | Perfil y cambio de tema | RQNF005 |
 | `pantallas.html` | Índice de todas las pantallas | |
 
-El tema oscuro se activa con el botón de luna de la barra superior o agregando `?tema=oscuro` a la dirección.
+El tema oscuro se activa con el botón de luna de la barra superior o agregando `?tema=oscuro` a la dirección. Para ver solo la estructura de cualquier pantalla (wireframe en escala de grises) se agrega `?modo=wireframe`.
 
 ## Cómo abrirlo
 
